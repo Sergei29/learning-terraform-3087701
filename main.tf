@@ -16,7 +16,7 @@ data "aws_ami" "app_ami" {
 }
 
 # 2. Provision the Free-Tier Eligible EC2 instance
-resource "aws_instance" "web" {
+resource "aws_instance" "blog" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type # 750 free hours/month on the standard AWS Free Tier
 
